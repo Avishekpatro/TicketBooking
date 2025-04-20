@@ -19,8 +19,8 @@ public class Database {
     public  void CreateConnection() {
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/ticket",
-                    "root","Navasthi#1");
+            connection = DriverManager.getConnection(UserServiceUtil.URL,
+                    UserServiceUtil.USER,UserServiceUtil.PASSWORD); // password is null Add your PWD
              statement = connection.createStatement();
             System.out.println("Connection extablished Successfully!");
 
